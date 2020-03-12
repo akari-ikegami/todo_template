@@ -49,11 +49,11 @@
 ### タスク関連の処理
 - index.php: 一覧ページ
 - create.php: 新規投稿ページ
-- store.php: 保存処理
+- store.php: 保存処理　新規作成の時のみ使用
 - edit.php: 編集ページ
 - update.php: 更新処理
 - delete.php: 削除処理
-- fundtion.php: 関数置き場
+- function.php: 関数置き場
 - dbconnect.php: DB接続処理
 
 ### 認証関連の処理
@@ -64,6 +64,7 @@
 - signout.php: サインアウト処理
 
 ### DB保存関連の処理
+
 - Models/Model.php: 共通の処理
 - Models/Task.php: タスク関連のDB処理
 - Models/User.php: ユーザー関連のDB処理
