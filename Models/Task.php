@@ -26,7 +26,7 @@ class Task extends Model
          // 検索機能
           public function findByTitle($date)
           {
-              $stmt = $this->db_manager->dbh->prepare('SELECT * FROM'.$this->table.'WHERE title LIKE ?');
+              $stmt = $this->db_manager->dbh->prepare('SELECT * FROM '.$this->table.' WHERE title LIKE ?');
               $stmt->execute($date);
               $tasks = $stmt->fetchAll();
               return $tasks;
