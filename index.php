@@ -79,9 +79,9 @@ $tasks = $task->getAll();
                             <?= h($task['contents']); ?>
                         </p>
                         <div class="text-right d-flex justify-content-end">
-                            <a href="edit.php" class="btn text-success">EDIT</a>
+                            <a href="edit.php=<?= h($task['id']); ?>" class="btn text-success">EDIT</a>
                             <form action="delete.php" method="post">
-                                <input type="hidden" name="id" value="">
+                                <input type="hidden" name="id" value="<?= h($task['id']); ?>">
                                 <button type="submit" class="btn text-danger">DELETE</button>
                             </form>
                         </div>
