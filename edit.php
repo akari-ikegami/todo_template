@@ -1,5 +1,19 @@
 <?php
 
+    require_once('./Models/Task.php');
+    // require_once('./function.php');
+
+$id = $_GET['id'];
+
+// new Class名でインスタンス化
+$task = new Task();
+$task = $task->findById([$id]);
+// var_dump($tasks);
+// die;
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
