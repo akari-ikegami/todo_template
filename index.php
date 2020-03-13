@@ -22,7 +22,19 @@ require_once('./function.php');
 // メソッドを使う場合は最初にインスタンス化をする
 // new Class名でインスタンス化
 $task = new Task();
-$tasks = $task->getAll();
+
+
+// 検索機能
+// issetで変数がセットされているか調べて、セットされていたらtrueを返す
+// 
+if(isset($_GET['title'])){
+    $title = $_GET['title'];
+    // LIKE関数
+    // findByTitleをTask.phpに作る
+    $tasks = $task->findByTitle(["%$title%"]);
+} else {
+    $tasks = $task->getAll();
+}
 
 
 ?>
