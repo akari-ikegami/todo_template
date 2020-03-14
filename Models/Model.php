@@ -57,4 +57,16 @@ class Model
         return $stmt->execute($data);
     }
 
+    // 編集機能
+    public function findById($id)
+    {
+            $stmt = $this->db_manager->dbh->prepare('SELECT * FROM ' . $this->table. ' WHERE id = ?');
+
+            $stmt->execute($id);
+
+            $tasks = $stmt->fetch();
+
+            return $tasks;
+    }
+
 }
