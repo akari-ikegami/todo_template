@@ -68,4 +68,5 @@ class Model
 
             return $tasks;
     }
+
 }
